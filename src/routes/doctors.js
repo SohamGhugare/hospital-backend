@@ -5,7 +5,7 @@ import { createDoctor, getDoctorById } from '../models/doctor.js';
 router.post('/', async (req, res) => {
   try {
     const doctor = await createDoctor(req.body);
-    res.json(doctor);
+    res.status(201).json(doctor);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
   }
