@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     const patient = await createPatient(req.body);
     res.json(patient);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: error });
   }
 });
 
