@@ -31,5 +31,7 @@ model Patient {
   nurse Nurse? @relation(fields: [nurseId], references: [id])
   doctorId Int?
   nurseId Int?
+  disease String
+  medication String
 
 }
