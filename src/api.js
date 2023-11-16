@@ -1,9 +1,12 @@
 import express, { json } from 'express';
 const app = express();
+
+import cors from 'cors';
 import doctorsRouter from './routes/doctors.js';
 import patientsRouter from './routes/patients.js';
 
 app.use(json());
+app.use(cors());
 
 app.use('/doctors', doctorsRouter);
 app.use('/patients', patientsRouter);
