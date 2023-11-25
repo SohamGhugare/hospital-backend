@@ -4,9 +4,9 @@ const app = express();
 
 import cors from 'cors';
 
-import { doctorSchema } from './models/doctor.js';
-import { nurseSchema } from './models/nurse.js';
-import { patientSchema } from './models/patient.js';
+import { doctorSchema } from './schemas/doctor.js';
+import { nurseSchema } from './schemas/nurse.js';
+import { patientSchema } from './schemas/patient.js';
 
 // mongo connection
 mongoose.connect('ADD DATABASE URL HERE', {
