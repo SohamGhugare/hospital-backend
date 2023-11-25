@@ -9,7 +9,7 @@ import { nurseSchema } from './models/nurse.js';
 import { patientSchema } from './models/patient.js';
 
 // mongo connection
-mongoose.connect('', {
+mongoose.connect('ADD DATABASE URL HERE', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
