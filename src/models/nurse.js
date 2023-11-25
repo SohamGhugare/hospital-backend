@@ -1,12 +1,7 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import mongoose from 'mongoose';
 
-const createNurse = async (data) => {
-  return prisma.nurse.create({ data });
-};
+const nurseSchema = new mongoose.Schema({
+  name: String,
+});
 
-const getNurseById = async (id) => {
-  return prisma.nurse.findUnique({ where: { id } });
-};
-
-export { createNurse, getNurseById };
+export {nurseSchema};
